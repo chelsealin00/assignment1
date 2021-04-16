@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jurong Lake Gardens</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  body {
+    font: 400 15px/1.8 Lato, sans-serif;
+    color: #777;
+  }
+  h3, h4 {
+    margin: 10px 0 30px 0;
+    letter-spacing: 10px;      
+    font-size: 20px;
+    color: #111;
+  }
+  .container {
+    padding: 80px 120px;
+  }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+  }
+  .carousel-caption h3 {
+    color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: #f7f7f7;
+    color: #black;
+  }
+  .bg-1 h3 {color: #black;}
+  .list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail p {
+    margin-top: 15px;
+    color: #555;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+  }
+  .modal-header, h4, .close {
+    background-color: #333;
+    color: #fff !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-header, .modal-body {
+    padding: 40px 50px;
+  }
+  .nav-tabs li a {
+    color: #777;
+  }
+  #googleMap {
+    width: 100%;
+    height: 400px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+  }  
+  .navbar {
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+    color: #fff !important;
+  }
+  .navbar-nav li.active a {
+    color: #fff !important;
+    background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+  }
+  .open .dropdown-toggle {
+    color: #fff;
+    background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+    background-color: red !important;
+  }
+  footer {
+    background-color: #2d2d30;
+    color: #f5f5f5;
+    padding: 32px;
+  }
+  footer a {
+    color: #f5f5f5;
+  }
+  footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }  
+  .form-control {
+    border-radius: 0;
+  }
+  textarea {
+    resize: none;
+ 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+  
+  .center2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 110%;
+  }
+  
+.center3 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  }
+  
+ }
+  p.ex1 {
+  padding: 10px;
+  text-align: center;
+}
+
+ p.ex2 {
+  padding: 0px 10px 10px 10px;
+  text-align: center;
+}
+
+  p.ex3 {
+  padding: 20px 10px 0px 10px;
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+}
+
+  p.ex4 {
+  padding: 20px 0px 0px 0px;
+  text-align: center;
+}
+
+  p.ex4 {
+  padding: 20px 0px 0px 0px;
+  text-align: center;
+}
+
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Jurong Lake Gardens</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">Homepage</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Attractions
+          <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#RasauWalk">Rasau Walk</a></li>
+            <li><a href="#ForestRamble">Forest Ramble</a></li>
+            <li><a href="#FusionSpoon">Fusion Spoon</a></li> 
+          </ul>
+        </li>
+                <li><a href="#Map">Map</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+	  <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="topimage.png" alt="Jurong Lake Gardens" width="1000" height="700">
+        <div class="carousel-caption">
+          <p style ="font-size:150%;"> Jurong Lake Gardens</p>
+          <p>Singapore’s new national gardens in the heartlands</p>
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="clusiacove.png" alt="Clusia Cove" width="500" height="100">
+        <div class="carousel-caption">
+		<p style ="font-size:150%;"> Clusia Cove</p>
+          <p>Beat the heat. Take a dip!</p>
+        </div>      
+      </div>
+	
+	 <div class="item">
+        <img src="grasslands.png" alt="Grasslands" width="1200" height="700">
+        <div class="carousel-caption">
+		<p style ="font-size:150%;"> Grasslands</p>
+          <p>Take a stroll in fields of gold.</p>
+        </div>      
+      </div>
+	  
+	  <div class="item">
+        <img src="neramstreams.png" alt="Neram Streams" width="1200" height="700">
+        <div class="carousel-caption">
+		<p style ="font-size:150%;"> Neram Streams</p>
+          <p>Get close to the shallow waters of the streams.</p>
+        </div>      
+      </div>
+	  </div>
+
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<div id="RasauWalk" class="container text-center">
+  <h3>Rasau Walk</h3>
+  <p><em> Get close to the water's edge along a meandering boardwalk.</em></p>
+  <img src="rasauwalk.png" alt="Rasau Walk" width="100%" height="100%">
+  <p class="ex1"> A meandering boardwalk along the water’s edge, Rasau Walk enables visitors to get up close with nature. Plants along Rasau Walk thrive in the riparian zone, where parts of certain plants are constantly submerged underwater. Many of these plant species have evolved mechanisms that allow them to cope with constant inundation.</p>
+  <br>
+ 
+  <div class="w3-row-padding w3-padding-16" id="about">
+    <div class="w3-col m6">
+      <img src="rasau1.jpg" alt="Rasau Walk Gallery" style="width:90%">
+	  <p class="ex1"></p>
+    </div>
+    <div class="w3-col m6">
+      <img src="rasau2.jpeg" alt="Rasau Walk Gallery" style="width:90%">
+    </div>
+  </div>
+  </div>
+  
+<div id="ForestRamble" class="container text-center">
+  <h3>Forest Ramble</h3>
+  <p><em>The largest nature playgarden in the heartlands.</em></p>
+  <img src="forestramble.jpg" alt="Supertree Grove" width="85%" height="85%">
+  <p class="ex1">Forest Ramble is a playground inspired by nature, with features that enable children to mimic the natural movements of the creatures that inhabit freshwater swamp forests.</p>
+  <p class="ex1">	There are 13 different adventure stations for children to explore, each with their own unique features. </p>
+  <p> Click on the images to learn more about the different stations!</p>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p class="ex4"><strong>Heron Play</strong></p><br>
+      <a href="#demo" data-toggle="collapse">
+        <img src="heronplay.jpg" class="img-rectangle" alt="Heron Play"  width="85%">
+	</a>
+      <div id="demo" class="collapse">
+        <p class="ex1">There are 2 gliders of different lengths which enable kids to soar like a Grey Heron from one platform to another.</p>
+	  </div>  
+    </div>
+    <div class="col-sm-4">
+      <p class="ex4"><strong>Frog Play</strong></p><br>
+      <a href="#demo2" data-toggle="collapse">
+        <img src="frogplay.jpg" class="img-rectangle" alt="Frog Play"  width="85%">
+      </a>
+      <div id="demo2" class="collapse">
+		<p class="ex1">The play area is set smid grasses and enables kids to hop from one 'lily pad' to another. The pads are actually small trampolines that are set in the ground.</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p class="ex4"><strong>Crab Play</strong></p><br>
+      <a href="#demo3" data-toggle="collapse">
+        <img src="crabplay.jpg" class="img-rectangle" alt="Crab Play"  width="100%">
+      </a>
+      <div id="demo3" class="collapse">
+        <p class="ex1"> Kids can 'burrow' in this wodden maze like a swap forest crab scurrying to safety.</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+	<div class="col-sm-4">
+      <p class="ex4"><strong>Ant Play</strong></p><br>
+      <a href="#demo4" data-toggle="collapse">
+        <img src="antplay.jpg" class="img-rectangle" alt="Ant Play" width="85%">
+      </a>
+      <div id="demo4" class="collapse">
+        <p class="ex1"> Depending on programme availability, giant building blocks will be provided in this sheltered play area and kids can use them to build castles and houses based on their imagination - just like how ants build their homes below the ground.</p>
+      </div>
+	  </div>
+	<div class="col-sm-4">
+      <p class="ex4"><strong>Birdwing Play</strong></p><br>
+      <a href="#demo5" data-toggle="collapse">
+        <img src="birdwingplay.jpg" class="img-rectangle" alt="Birdwing Play" width="100%">
+      </a>
+      <div id="demo5" class="collapse">
+        <p class="ex1"> This play area consists of 9 swings of varied designs - rope swings, a bucket swing, basket swings, and a seesaw swing. The last one is the most fun of the lot!</p>
+      </div>
+	  </div>
+	  <div class="col-sm-4">
+      <p class="ex4"><strong>Otter Play</strong></p><br>
+      <a href="#demo6" data-toggle="collapse">
+        <img src="otterplay.jpg" class="img-rectangle" alt="Otter Play"  width="100%">
+      </a>
+      <div id="demo6" class="collapse">
+        <p class="ex1"> Here, there are logs and boulders that re-create the habitat of the otter and it is also where kids can hone their balancing skills as they climb, balance of jump over the logs.</p>
+      </div>
+    </div>
+   </div>
+  <div class="row">
+	<div class="col-sm-4">
+      <p class="ex4"><strong>Monkey & Spider Play</strong></p><br>
+      <a href="#demo7" data-toggle="collapse">
+        <img src="monkeyspiderplay.jpg" class="img-rectangle" alt="Monkey & Spider Play" width="100%">
+      </a>
+      <div id="demo7" class="collapse">
+        <p class="ex1"> Got monkeys at home which cannot stay still? Bring them to this net structure and watch them climb and swing away - just like how the Raffles' Banded Langur moves through a forest canopy.</p>
+      </div>
+    </div>
+	<div class="col-sm-4">
+      <p class="ex4"><strong>Squirrel Play</strong></p><br>
+      <a href="#demo8" data-toggle="collapse">
+        <img src="squirrelplay.jpg" class="img-rectangle" alt="Squirrel Play" width="100%">
+      </a>
+      <div id="demo8" class="collapse">
+        <p class="ex1"> This play area consists of log seesaws, balancing log and rope obstacle courses, balancing springboards and ramps that connect to a wooden structure resembling a squirrel's nest.</p>
+      </div>
+	  </div>
+	 <div class="col-sm-4">
+      <p class="ex4"><strong>Snake Play</strong></p><br>
+      <a href="#demo9" data-toggle="collapse">
+        <img src="snakeplay.jpg" class="img-rectangle" alt="Snake Play"  width="95%">
+      </a>
+      <div id="demo9" class="collapse">
+        <p class="ex1"> The tallest play structure at Forest Ramble allows kids to climb all the way up, just like how a Paradise Tree Snake scales a tree.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="FusionSpoon" class="bg-1">
+  <div class="container">
+    <h3 class="text-center" style= "color:black;">Fusion Spoon</h3>
+    <p class="text-center" style= "color:grey;">Away from the frenzy of the city, one can enjoy dining amidst nature.</p>
+    <img class="center" src="fusionspoon.jpg" alt="Fusion Spoon" style="width:100%;">
+  <p class="ex1">Fusion Spoon is the only dining restaurant in the Jurong Lake Gardens. Situated near the eco-pond, visitors can enjoy dining amidst nature and scenic view of the Jurong Lake. They can explore various food options ranging from Western to Asian cuisines.</p>
+  <br>
+
+<div class="w3-content">
+<div class="w3-row w3-margin">
+<div class="w3-third">
+  <img src="hotpotbuffet.jpg" style="width:100%;min-height:100px" alt="Hot Pot Buffet> 
+			<area shape = "default" >
+</div>
+<div class="w3-twothird w3-container">
+  <p style="font-size: 150%">Hot Pot Buffet</p>
+  <p>The buffet (from $22.80) features an array of premium items like fresh prawns and sliced beef, as well as a few novel items like beef tripe.</p>
+</div>
+</div>
+
+<div class="w3-row w3-margin">
+<div class="w3-third">
+  <img src="seafoodmariana.jpg" style="width:100%;min-height:100px" alt="Spaghetti Seafood Mariana> 
+			<area shape = "default" >
+</div>
+<div class="w3-twothird w3-container">
+  <p style="font-size: 150%">Spaghetti Seafood Mariana</p>
+  <p>Made with prawns, cuttlefish and fish slices, the Spaghetti Seafood Mariana ($8) has a generous portion and offers a kick of spice.</p>
+</div>
+</div>
+
+<div class="w3-row w3-margin">
+<div class="w3-third">
+  <img src="salmon.jpg" style="width:100%;min-height:100px" alt="Honey Mustard Atlantic Salmon> 
+			<area shape = "default" >
+</div>
+<div class="w3-twothird w3-container">
+  <p style="font-size: 150%">Honey Mustard Atlantic Salmon</p>
+  <p>Swimming in right is an elegantly plated dish of Honey Mustard Atlantic Salmon ($13.70). This was served as a pan-grilled salmon fillet drizzled with a thin layer of honey mustard, alongside some greens and mashed potatoes.
+
+</p>
+</div>
+</div>
+
+<div class="w3-row w3-margin">
+<div class="w3-third">
+  <img src="mangobingsu.jpg" style="width:100%;min-height:100px" alt="Mango Bingsu> 
+			<area shape = "default" >
+</div>
+<div class="w3-twothird w3-container">
+  <p style="font-size: 150%">Mango Bingsu</p>
+  <p>To cool down from the heat, enjoy a Mango Binsu for just $8.30.If you’re not quite into fruits, you can try out the Oreo Bingsu ($7.30) or Injeolmi Bingsu ($7.30) too!</p>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+    
+
+<div id="Map" class="bg-1">
+ <div class="container">
+<h3 class="text-center" style= "color:black;">Map of Jurong Lake Gardens</h3>
+<p class="text-center"> (Click on the attractions to learn more!)</p>
+<img src="map.png" class="center3" usemap="#workmap" style="width:100%">
+
+<map name="workmap">
+  <area shape="circle" coords="270,270,100"
+ alt="Clusia Cove" href="https://www.nparks.gov.sg/juronglakegardens/explore-our-gardens/attractions/clusia-cove">
+  <area shape="circle" coords="380,360,50"
+ alt="PAssionWaVe@JLG" href="https://www.nparks.gov.sg/juronglakegardens/explore-our-gardens/attractions/passion-wave-@-jurong-lake-gardens">
+   <area shape="circle" coords="370,480,70"
+ alt="Forest Ramble" href="https://www.nparks.gov.sg/juronglakegardens/explore-our-gardens/attractions/forest-ramble-(nature-playgarden)">
+  <area shape="circle" coords="420,640,70"
+ alt="Gardenhouse" href="https://www.nparks.gov.sg/juronglakegardens/whats-happening/bazaar-in-the-garden">
+ <area shape="circle" coords="430,750,50"
+ alt="Rsau Walk" href="https://www.nparks.gov.sg/juronglakegardens/explore-our-gardens/attractions/rasau-walk">
+  <area shape="circle" coords="430,860,50"
+ alt="Neram Streams" href="https://www.nparks.gov.sg/juronglakegardens/explore-our-gardens/attractions/neram-streams">
+  <area shape="circle" coords="340,840,50"
+ alt="ActiveSG Park" href="https://www.nparks.gov.sg/juronglakegardens/explore-our-gardens/attractions/activesg-park-@-jurong-lake-gardens">
+
+</div>
+</div>
+  
+
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Chelsea' Assignment 1 </p> 
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
